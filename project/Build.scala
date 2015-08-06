@@ -24,7 +24,8 @@ object ScapegoatCustomInspectionsExample extends Build {
         "my.inspections.DisallowJavaDateConstruction"),
 
       scapegoatCustomInspectionsClasspath := List(
-        new File("inspections/target/scala-2.11/scapegoat-classes/").getAbsoluteFile))
+        (classDirectory in inspections in Scapegoat).value))
+
     // FIXME: this dependency ought to be in scope 'provided', as it is
     // compile only, so is not needed at runtime.
     // Unfortunately, the current definition of the SBT 'scapegoat' task
