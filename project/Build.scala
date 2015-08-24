@@ -41,6 +41,7 @@ object ScapegoatCustomInspectionsExample extends Build {
     .settings(
       libraryDependencies ++= List(
         "com.sksamuel.scapegoat" %% "scalac-scapegoat-plugin" % "1.1.0",
-        "org.scala-lang" % "scala-compiler" % scalaV),
+        "org.scala-lang"         %  "scala-compiler"          % scalaV,
+        "org.scalatest"          %% "scalatest"               % "2.2.4" % "test"),
       scalaVersion := scalaV)
 }
